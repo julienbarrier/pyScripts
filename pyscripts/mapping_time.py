@@ -3,7 +3,7 @@ Mapping time:
     functions to calculate how long a sweep will be
 """
 
-from typing import Optional
+from typing import Optional, tuple
 from warning import warn
 from datetime import datetime, timedelta
 
@@ -11,10 +11,10 @@ from datetime import datetime, timedelta
 def sweep_1d(
     start: float,
     stop: float,
-    sweep_up_rate: Optional['float'] = 0,
-    sweep_down_rate: Optional['float'] = 0,
-    waiting: Optional['float'] = 0,
-    time_per_point: Optional['float'] = 1,
+    sweep_up_rate: Optional[float] = 0,
+    sweep_down_rate: Optional[float] = 0,
+    waiting: Optional[float] = 0,
+    time_per_point: Optional[float] = 1,
     **kw
 ) -> tuple[float]:
 
@@ -76,10 +76,10 @@ def sweep_2d(
     start_slow: float,
     stop_slow: float,
     step: float,
-    waiting: Optional['float'] = 0,
-    time_per_point: Optional['float'] = 1,
+    waiting: Optional[float] = 0,
+    time_per_point: Optional[float] = 1,
     **kw
-) -> tuple(float):
+) -> tuple[float]:
 
     echo = kw.pop('echo', True)
     if echo:
