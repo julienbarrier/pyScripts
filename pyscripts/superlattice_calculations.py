@@ -11,7 +11,8 @@ from warning import warn
 class superlattice:
     """
     class to evaluate some parameters in a given superlattice
-    defaults are assuming
+    defaults are assuming graphene-hBN superlattice, but can easily be changed
+    to account for bilayer graphene.
     """
     def __init__(self, name: str,
                  bzf: Optional[float] = 0,
