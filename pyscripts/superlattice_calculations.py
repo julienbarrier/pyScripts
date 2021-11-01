@@ -43,7 +43,7 @@ class superlattice:
             delta: 1.8/100 for graphene-hBN superlattice, 0 for bilayer
             graphene
         """
-        lambda_sl = self.unit_length
+        lambda_sl = self.unit_length()
         a = .246e-9
         phi = arccos(1+(delta**2 * lambda_sl**2 - (1+delta)**2 * a**2) /
                      (2*lambda_sl**2*(1+delta))
