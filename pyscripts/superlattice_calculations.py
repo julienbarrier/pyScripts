@@ -5,7 +5,7 @@ superlattice calculations
 from typing import Optional
 from scipy.constants import h, e
 from numpy import arccos
-from warning import warn
+from warnings import warn
 
 
 class superlattice:
