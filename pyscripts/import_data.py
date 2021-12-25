@@ -19,15 +19,15 @@ def find_files(indir, fbase):
     print('found %s text files'%len(scans))
     return scans
 
-def import_files(indir,fbase):
+def import_files(indir, fbase, a: float = 0, b: float = 3, **kwargs):
     "import the text files in directory indir containing fbase"
     list = find_files(indir,fbase);
     list.sort();
     file = [None] * len(list)
     temp = copy.copy(file)
     for filenumber in range(len(list)):
-        file[filenumber]= pd.read_csv('%s'%list[filenumber],sep='\s+')
-        temp[filenumber] = list[filenumber][len(indir):len(indir)+3]
+        file[filenumber]= pd.read_csv('%s'%list[filenumber],sep='\s+',**kwargs)
+        temp[filenumber] = list[filenumber][len(indir)+a:len(indir)+b]
     del list
 
     return temp,file
