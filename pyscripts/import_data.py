@@ -4,9 +4,9 @@
 ##
 ## Definition of functions to import navigate in files and import some
 
-import os
 import glob
 import copy
+import pandas as pd
 
 def find_dirs(d):
     "list the directories in directory d"
